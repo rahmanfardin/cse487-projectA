@@ -58,6 +58,10 @@ This project is a moderately complex exercise in designing, configuring, and har
 * **Detailed Report:** A comprehensive report documenting the entire project, including explanations, screenshots, and analysis
 * **Oral Presentation:** A presentation summarizing the project, findings, and insights
 
+## Project Summary Image
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/TwZsYHh/image.png" alt="image" border="0"></a>
+
 ## Disclaimer
 
 This project is intended for educational purposes. Use the knowledge gained responsibly and in accordance with ethical guidelines.
