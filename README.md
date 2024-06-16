@@ -1,1 +1,1 @@
-# cse487-projectA
+# CSE487-projectA
