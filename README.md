@@ -60,7 +60,7 @@ This project is a moderately complex exercise in designing, configuring, and har
 
 ## Project Summary Image
 
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/TwZsYHh/image.png" alt="image" border="0"></a>
+<img src="https://i.ibb.co/TwZsYHh/image.png" alt="image" border="0">
 
 ## Disclaimer
 
