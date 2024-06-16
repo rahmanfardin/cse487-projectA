@@ -1,37 +1,63 @@
 # CSE487-projectA
-Project: Securing a networked system with PKI
+# Securing a Networked System with Public Key Infrastructure (PKI)
 
-Activity: Moderately complex security systems design project with report writing and oral presentation
+This project is a moderately complex exercise in designing, configuring, and hardening a secure network environment using Public Key Infrastructure (PKI). The project involves both practical implementation and comprehensive documentation and presentation components.
 
+## Project Goals
 
-##Requirements: 
+1. **Establish a Robust PKI:** Create and manage a hierarchical PKI with a Root CA (AcmeRootCA) and a Subordinate CA (AcmeSubCA).
+2. **Secure Web Server Configuration:** Set up a secure web server (Apache2) with multiple websites and virtual hosts on a Linux machine.
+3. **Domain Name System (DNS) Setup:** Configure a DNS server to handle multiple domains, subdomains, and both forward and reverse lookups.
+4. **Firewall and OpenSSH Hardening:** Implement strict firewall rules and configure secure remote access using OpenSSH with a non-standard port.
+5. **Certificate Management:** Handle the entire certificate lifecycle, from Certificate Signing Requests (CSR) generation and validation to issuance, installation, and revocation.
+6. **Web Traffic Security:** Ensure secure (HTTPS) connections and automatic redirection from HTTP.
+7. **Network Traffic Analysis:** Use Wireshark to observe and understand the TCP and TLS handshakes.
+8. **Intrusion Detection and Prevention:** Configure an Intrusion Detection System (IDS) to detect and mitigate threats, including a simulated SYN flood attack.
+9. **Advanced PKI Services:** Implement a self-service CA website and utilize Online Certificate Status Protocol (OCSP) for efficient certificate management.
 
-Configuration of Certification Authority AcmeCA with AcmeRootCA as the RootCA.
-Configuration of the SubCA as the AcmeSubCA.
-Configuration of the Web Server with Apache2 on a Linux Host. 
-Configuration of multiple websites on a single server. 
-DNS server configuration to resolve www.ewubdca.com, www.cnn.com, www.bbc.com. For both forward and reverse zones. DNS server should resolve multiple domains.
-DNS server configuration to resolve two subdomains:
-apply.ewubdca.com 
-download.ewubdca.com
-Firewall configuration to allow necessary ports (22, 53, 80, 443, 3000) only, deny all other ports.
-Installing and configuring OpenSSH to enable SSH to the server and the CA.
-Change the SSH default port from 22 to 3000.
-CSR Configuration and Generation for the www.ewuca.com and for any of its subdomains *..ewuca.com
-Create a webpage and place a form to take CSR from the visitors as text input, and include textboxes to take relevant information from the requester for Organizational Validation.
-Transfering the CSR to AcmeCA by SFTP/SCP/VM networking/CA Web-interface. 
-Certification process (Verification and Certificate Generation from CSR).
-Transferring the certificate from AcmeCA to the server www.verysecureserver.com by SFTP/SCP/VM networking. 
-Installation of the signed the SSL certificate in the server of www.verysecureserver.com
-Making the system trust Acme-RootCA (the certificate of the SubCA should not be imported into the client PC). 
-Implementation of a simple file uploading page in the server. 
-Automatically redirect all http:// traffic to https:// 
-Verifying the security of the connection by inspection (the padlock icon).
-Identify the TCP three-way-handshake and TLS four-way-handshake packets in Wireshark from another computer while connecting to https://www.verysecureserver.com
-Revoke the certificate issued to www.verysecureserver.com from the CA and distribute the first CRL.
-Verifying the revocation of previous certificate from the CRL (no padlock icon).
-Configuring IDS, and demonstrating a SYN flood attack and identifying the attacker from the log files. 
-Block the attack by any means (e.g., blacklist the attacker’s ip address in the firewall).
-Creating a Website called www.acmeca.com where the users can paste their CSRs and get a signed certificate ready to be downloaded.
-Configuring OCSP to manage certificates and CRLs.
-Revoke the certificate and show the padlock is gone.
+## Project Requirements
+
+* **Tools:** Linux host, Apache2, OpenSSL, Wireshark, IDS software
+* **Knowledge:** PKI principles, web server configuration, DNS, firewalling, SSH, network protocols (TCP/IP, TLS), security best practices
+
+## Detailed Tasks
+
+1. **PKI Setup:**
+   * Create and configure AcmeRootCA as the Root CA.
+   * Create and configure AcmeSubCA as the Subordinate CA.
+2. **Web Server Configuration:**
+   * Install and configure Apache2.
+   * Set up virtual hosts for `www.ewubdca.com`, `www.cnn.com`, and `www.bbc.com`.
+3. **DNS Server Configuration:**
+   * Configure DNS zones for the main domains and subdomains (`apply.ewubdca.com`, `download.ewubdca.com`).
+   * Enable both forward and reverse DNS resolution.
+4. **Firewall and OpenSSH Configuration:**
+   * Configure firewall rules to allow only ports 22 (later changed to 3000), 53, 80, 443.
+   * Install and configure OpenSSH, changing the default port to 3000.
+5. **Certificate Management:**
+   * Generate and submit CSRs for `www.ewubdca.com` and its subdomains.
+   * Validate CSRs and issue certificates.
+   * Transfer and install certificates on the web server.
+6. **Web Traffic Security:**
+   * Enforce HTTPS using the installed certificates.
+   * Automatically redirect HTTP traffic to HTTPS.
+7. **Network Traffic Analysis:**
+   * Use Wireshark to capture and analyze TCP and TLS handshake packets.
+8. **Intrusion Detection and Prevention:**
+   * Configure and enable IDS.
+   * Simulate a SYN flood attack.
+   * Identify the attacker from IDS logs and block the attack.
+9. **Advanced PKI Services:**
+   * Create `www.acmeca.com` for self-service certificate issuance.
+   * Configure and utilize OCSP for certificate revocation checking.
+
+## Deliverables
+
+* **Functional PKI:** A working, secure PKI infrastructure
+* **Secure Web Server:** A hardened web server serving multiple sites over HTTPS
+* **Detailed Report:** A comprehensive report documenting the entire project, including explanations, screenshots, and analysis
+* **Oral Presentation:** A presentation summarizing the project, findings, and insights
+
+## Disclaimer
+
+This project is intended for educational purposes. Use the knowledge gained responsibly and in accordance with ethical guidelines.
