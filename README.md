@@ -1,4 +1,4 @@
-# CSE487-projectA
+
 # Securing a Networked System with Public Key Infrastructure (PKI)
 
 This project is a moderately complex exercise in designing, configuring, and hardening a secure network environment using Public Key Infrastructure (PKI). The project involves both practical implementation and comprehensive documentation and presentation components.
